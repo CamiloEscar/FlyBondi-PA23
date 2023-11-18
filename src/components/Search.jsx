@@ -44,26 +44,48 @@ const Search = () => {
         });
     }
 
-    // Función para realizar la búsqueda
     const performSearch = () => {
-        const results = vuelos.filter((vuelo) => {
-            // Lógica de búsqueda según los filtros
-
-            // Verificar si se proporciona algún valor en los filtros
-            const hasDestination = filters.destination.trim() !== '';
-            const hasOrigin = filters.origin.trim() !== '';
-            const hasDate = filters.date.trim() !== '';
-
-            // Aplicar lógica de búsqueda
-            const destinationMatch = hasDestination && vuelo.destination.toLowerCase().includes(filters.destination.toLowerCase());
-            const originMatch = hasOrigin && vuelo.origin.toLowerCase().includes(filters.origin.toLowerCase());
-            const dateMatch = hasDate && vuelo.data.includes(filters.date);
-
-            return destinationMatch || originMatch || dateMatch;
-        });
-
+        let results = vuelos;
+    
+        // Filtra por nombre (destination)
+        if (filters.destination) {
+            results = results.filter(vuelo =>
+                vuelo.destination.toLowerCase().includes(filters.destination.toLowerCase())
+            );
+        }
+    
+        // Filtra por origen
+        if (filters.origin) {
+            results = results.filter(vuelo =>
+                vuelo.origin.toLowerCase().includes(filters.origin.toLowerCase())
+            );
+        }
+    
+        // Filtra por fecha
+        if (filters.date) {
+            results = results.filter(vuelo =>
+                vuelo.data.includes(filters.date)
+            );
+        }
+    
+        // Filtra por disponibilidad
+        if (filters.availability) {
+            results = results.filter(vuelo =>
+                vuelo.availability.toString().includes(filters.availability)
+            );
+        }
+    
+        // Filtra por precio
+        if (filters.price) {
+            results = results.filter(vuelo =>
+                parseFloat(vuelo.price) <= parseFloat(filters.price)
+            );
+        }
+    
         setFilteredResults(results);
-    }
+    };
+    
+    
 
     // Efecto secundario para cargar datos de la API al montar el componente
     useEffect(() => {
