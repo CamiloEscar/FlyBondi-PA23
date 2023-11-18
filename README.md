@@ -1,6 +1,6 @@
 ﻿# FlyBondi-PA23 - Buscador de Vuelos
 
-Bienvenido al Buscador de Vuelos, una aplicación simple para buscar y filtrar vuelos.
+Buscador de Vuelos, una aplicación simple para buscar y filtrar vuelos.
 
 ![IMG](https://raw.githubusercontent.com/CamiloEscar/FlyBondi-PA23/main/src/assets/Img.png)
 ## Características
