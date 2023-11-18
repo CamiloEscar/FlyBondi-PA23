@@ -3,7 +3,7 @@
 Bienvenido al Buscador de Vuelos, una aplicación simple para buscar y filtrar vuelos.
 
 ## Capturas de Pantalla
-![Texto Alternativo]([ruta/de/la/imagen.png](https://raw.githubusercontent.com/CamiloEscar/FlyBondi-PA23/main/src/assets/Img.png))
+![Texto Alternativo]([https://raw.githubusercontent.com/CamiloEscar/FlyBondi-PA23/main/src/assets/Img.png])
 ## Características
 
 - Buscar vuelos por destino, origen, fecha, disponibilidad y precio.
