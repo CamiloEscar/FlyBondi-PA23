@@ -22,7 +22,7 @@ function App() {
           {/* Elemento de cuadrícula para la imagen y la búsqueda */}
           <Grid item xs={10} md={6} lg={4}>
             {/* Imagen del logotipo de FlyBondi */}
-            <img className='flight-image' src="https://camo.githubusercontent.com/87c0241be85ca2be42708cc329284aead15b9844a06450a4e4f333ea8c55abbb/68747470733a2f2f666c79626f6e64692e636f6d2f6173736574732f696d616765732f6c6f676f2e737667" alt="FlyBondi Logo" />
+            <img className='flight-image' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flybondi_logo_simple.svg/320px-Flybondi_logo_simple.svg.png" alt="FlyBondi Logo" />
             {/* Componente de búsqueda */}
             <Search />
           </Grid>
